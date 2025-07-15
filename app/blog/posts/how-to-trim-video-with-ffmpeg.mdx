@@ -1,0 +1,17 @@
+---
+title: 'How to trim video with ffmpeg'
+publishedAt: '2025-07-16'
+summary: ''
+---
+
+```bash
+ffmpeg -i input.mp4 -ss 00:01:30 -to 00:02:30 -c:v copy -c:a copy output.mp4
+```
+
+Parameter description:
+
+-ss 00:01:30: start time (1 minute and 30 seconds)
+
+-to 00:02:30: end time (2 minutes and 30 seconds)
+
+-c:v copy -c:a copy: directly copy the audio and video stream (lossless and fast)
